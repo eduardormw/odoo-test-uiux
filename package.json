@@ -1,0 +1,26 @@
+{
+  "name": "odoo-test-uiux",
+  "version": "1.0.0",
+  "description": "UI/UX designer exercise for Odoo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "if exist dist rmdir /s /q dist",
+    "build": "mkdir dist && mkdir dist\\styles && sass --quiet-deps styles/_variables.scss dist/styles/main.css --style compressed && copy index.html dist\\index.html && copy node_modules\\bootstrap\\dist\\css\\bootstrap.min.css dist\\styles\\bootstrap.min.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eduardormw/odoo-test-uiux.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eduardormw/odoo-test-uiux/issues"
+  },
+  "homepage": "https://github.com/eduardormw/odoo-test-uiux#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "sass": "^1.83.0"
+  }
+}

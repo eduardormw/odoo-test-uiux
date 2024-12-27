@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odoo custom card</title>
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs" id="cardTabs" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="tab1-tab" data-toggle="tab" href="#tab1" role="tab" aria-controls="tab1" aria-selected="true">Tab 1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="tab2-tab" data-toggle="tab" href="#tab2" role="tab" aria-controls="tab2" aria-selected="false">Tab 2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="tab3-tab" data-toggle="tab" href="#tab3" role="tab" aria-controls="tab3" aria-selected="false">Tab 3</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="card-body">
+                <div class="tab-content" id="cardTabsContent">
+                    <!-- Tab 1 Content -->
+                    <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
+                        <h5 class="card-title">Title</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Subtitle</h6>
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <div class="list-group" id="list-tab" role="tablist">
+                                    <a class="list-group-item list-group-item-action active" id="list-pic1-list" data-toggle="list" href="#list-pic1" role="tab" aria-controls="pic1">First item</a>
+                                    <a class="list-group-item list-group-item-action" id="list-pic2-list" data-toggle="list" href="#list-pic2" role="tab" aria-controls="pic2">A second item</a>
+                                    <a class="list-group-item list-group-item-action" id="list-pic3-list" data-toggle="list" href="#list-pic3" role="tab" aria-controls="pic3">A third item</a>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="tab-content">
+                                    <div class="tab-pane fade show active border bg-dark text-white text-center p-5" id="list-pic1" role="tabpanel" aria-labelledby="list-pic1-list">Pic-1</div>
+                                    <div class="tab-pane fade border bg-warning text-dark text-center p-5" id="list-pic2" role="tabpanel" aria-labelledby="list-pic2-list">Pic-2</div>
+                                    <div class="tab-pane fade border bg-primary text-white text-center p-5" id="list-pic3" role="tabpanel" aria-labelledby="list-pic3-list">Pic-3</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
+                        <div class="d-flex justify-content-center align-items-center" style="height: 200px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" class="w-50">
+                                <path fill="#000000" stroke="#000000" stroke-width="2" transform-origin="center" d="m148 84.7 13.8-8-10-17.3-13.8 8a50 50 0 0 0-27.4-15.9v-16h-20v16A50 50 0 0 0 63 67.4l-13.8-8-10 17.3 13.8 8a50 50 0 0 0 0 31.7l-13.8 8 10 17.3 13.8-8a50 50 0 0 0 27.5 15.9v16h20v-16a50 50 0 0 0 27.4-15.9l13.8 8 10-17.3-13.8-8a50 50 0 0 0 0-31.7Zm-47.5 50.8a35 35 0 1 1 0-70 35 35 0 0 1 0 70Z">
+                                    <animateTransform type="rotate" attributeName="transform" calcMode="spline" dur="1.6" values="0;120" keyTimes="0;1" keySplines="0 0 1 1" repeatCount="indefinite"></animateTransform>
+                                </path>
+                            </svg>
+                            <span class="ml-2">Loading...</span>
+                        </div>
+                    </div>
+                    <!-- Tab 3 Content -->
+                    <div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="https://placehold.co/200x150" class="img-fluid" alt="Example Image">
+                            </div>
+                            <div class="col-md-8">
+                                <h5 class="mb-3">Static Content</h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras volutpat urna quis cursus tempor. Suspendisse potenti.</p>
+                                <ul>
+                                    <li>Point 1: Example list item</li>
+                                    <li>Point 2: Example list item</li>
+                                    <li>Point 3: Example list item</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer text-muted">
+                2 days ago
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>

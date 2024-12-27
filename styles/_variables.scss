@@ -1,0 +1,9 @@
+$custom-widths: (
+    "50": 50px,
+);
+
+@each $name, $size in $custom-widths {
+    .w-#{$name} {
+        width: $size !important;
+    }
+}
