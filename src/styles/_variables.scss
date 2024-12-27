@@ -1,0 +1,15 @@
+$custom-widths: (
+    "50": 50px,
+);
+
+@each $name, $size in $custom-widths {
+    .w-#{$name} {
+        width: $size !important;
+    }
+}
+
+$nav-tabs-link-active-bg: #ffffff; 
+$nav-tabs-border-color: #dee2e6; 
+$nav-tabs-border-width: 1px; 
+
+$nav-tabs-link-active-border-color: transparent transparent $nav-tabs-border-color transparent;
