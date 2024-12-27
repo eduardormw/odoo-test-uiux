@@ -1,15 +1,54 @@
+$primary: #007bff;
+$secondary: #6c757d;
+$success: #28a745;
+$danger: #dc3545;
+$warning: #ffc107;
+$info: #17a2b8;
+$light: #f8f9fa;
+$dark: #343a40;
+$white: #ffffff;
+$black: #000000;
+
 $custom-widths: (
-    "50": 50px,
+    "50": 50px
 );
 
-@each $name, $size in $custom-widths {
+@each $name,
+$size in $custom-widths {
     .w-#{$name} {
         width: $size !important;
     }
 }
 
-$nav-tabs-link-active-bg: #ffffff; 
-$nav-tabs-border-color: #dee2e6; 
-$nav-tabs-border-width: 1px; 
+@mixin contextual-card($bg, $text, $border) {
+    .nav-link {
+        color: $bg;
+    }
 
-$nav-tabs-link-active-border-color: transparent transparent $nav-tabs-border-color transparent;
+    .card-body {
+        background-color: $bg;
+        color: $text;
+    }
+
+    .card-footer {
+        border: 1px solid $border;
+    }
+}
+
+$contextual-card-variants: (
+    primary: ($primary, $white, $primary),
+    secondary: ($secondary, $white, $secondary),
+    success: ($success, $white, $success),
+    danger: ($danger, $white, $danger),
+    warning: ($warning, $black, $warning),
+    info: ($info, $white, $info),
+    light: ($light, $dark, $light),
+    dark: ($dark, $white, $dark)
+);
+
+@each $name,
+$colors in $contextual-card-variants {
+    .card-#{$name} {
+        @include contextual-card(nth($colors, 1), nth($colors, 2), nth($colors, 3));
+    }
+}
