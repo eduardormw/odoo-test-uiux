@@ -31,7 +31,10 @@ UI/UX designer exercise for Odoo
 5. **Missing roles**
    - The card component doesn’t have a `role="region"` or a descriptive label to help screen readers understand its purpose.
 
-6. **Image alt text**
+6. **Lazy loading**  
+   - The current card implentation lacks lazy loading for content (like the placeholder image), which can impact performance on pages with many visuals.
+
+7. **Image alt text**
    - The placeholder image alt text (`alt="Example Image"`) doesn’t describe the image properly.
 
 
