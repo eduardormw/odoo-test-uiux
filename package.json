@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "if exist dist rmdir /s /q dist",
-    "build": "mkdir dist && mkdir dist\\styles && sass --quiet-deps src/styles/_variables.scss dist/styles/main.css --style compressed && copy src\\index.html dist\\index.html && copy node_modules\\bootstrap\\dist\\css\\bootstrap.min.css dist\\styles\\bootstrap.min.css"
+    "clean-ml": "rm -rf dist",
+    "build": "npm run clean && mkdir dist && mkdir dist\\styles && mkdir dist\\scripts && sass --quiet --quiet-deps src/styles/_variables.scss dist/styles/main.css --style compressed && copy src\\index.html dist\\index.html && copy node_modules\\bootstrap\\dist\\css\\bootstrap.min.css dist\\styles\\bootstrap.min.css && copy src\\scripts\\main.js dist\\scripts\\main.js",
+    "build-ml": "npm run clean-ml && mkdir dist && mkdir dist/styles && mkdir dist/scripts && sass --quiet --quiet-deps src/styles/_variables.scss dist/styles/main.css --style compressed && cp src/index.html dist/index.html && cp node_modules/bootstrap/dist/css/bootstrap.min.css dist/styles/bootstrap.min.css && cp src/scripts/main.js dist/scripts/main.js"
   },
   "repository": {
     "type": "git",

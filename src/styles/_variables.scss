@@ -9,9 +9,7 @@ $dark: #343a40;
 $white: #ffffff;
 $black: #000000;
 
-$custom-widths: (
-    "50": 50px
-);
+$custom-widths: ("50": 50px);
 
 @each $name,
 $size in $custom-widths {
@@ -23,6 +21,16 @@ $size in $custom-widths {
 @mixin contextual-card($bg, $text, $border) {
     .nav-link {
         color: $bg;
+
+        &:focus {
+            outline: 2px solid $primary;
+            outline-offset: 2px;
+        }
+
+        &:hover {
+            color: darken($bg, 10%);
+            text-decoration: underline;
+        }
     }
 
     .card-body {
@@ -35,16 +43,14 @@ $size in $custom-widths {
     }
 }
 
-$contextual-card-variants: (
-    primary: ($primary, $white, $primary),
-    secondary: ($secondary, $white, $secondary),
-    success: ($success, $white, $success),
-    danger: ($danger, $white, $danger),
-    warning: ($warning, $black, $warning),
-    info: ($info, $white, $info),
-    light: ($light, $dark, $light),
-    dark: ($dark, $white, $dark)
-);
+$contextual-card-variants: (primary: ($primary, $white, $primary),
+secondary: ($secondary, $white, $secondary),
+success: ($success, $white, $success),
+danger: ($danger, $white, $danger),
+warning: ($warning, $black, $warning),
+info: ($info, $white, $info),
+light: ($light, $dark, $light),
+dark: ($dark, $white, $dark));
 
 @each $name,
 $colors in $contextual-card-variants {
